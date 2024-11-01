@@ -1,15 +1,16 @@
+import os
 import socket
 import time
 
 from src.constructor.sender.protected import random_size
-from src.role import Roles
+#from src.role import Roles
 
 
 class public_sender:
     random_byte = random_size()
     size = random_size()
     def create_tcp(Id):  #Типо переменная Id это сервер и хост
-        Id = Roles()
+        Id = os.getenv('basedate') #По задумке я взял внешнюю переменную из скрипта баш
         attempt = 3
         for i in range(attempt):
             try:
@@ -31,4 +32,4 @@ class public_sender:
         s.sendall(message)
 
 # Пример использования
-#tcp = create_tcp("example.com", 80) можно упростить переменную....наверное
+#tcp = create_tcp("example.com", 80)

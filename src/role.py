@@ -1,6 +1,6 @@
 
 
-
+ #скрипт для ручного выбора ролей
 class Roles:
 
         def ParentsRoles():

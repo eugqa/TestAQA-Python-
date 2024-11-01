@@ -16,11 +16,14 @@ for iface in $interfaces; do
     ILIST+=("$ipaddr")
 done
 
+#Записываем переменные полученные айпишник в массиве в переменную
+export basedate=ILIST
+
 python3 main.py
 
 #Тут я запустил вроде как приложение, но его же надо объявлять его в переменную для простановки порта..
 
-apps=("main.py") # По-моему глупость написал.
+apps=("main.py")
 
 for i in "${!apps[@]}"; do
     PORT=$((MIN_PORT + i))
