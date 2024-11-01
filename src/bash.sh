@@ -21,8 +21,6 @@ export basedate=ILIST
 
 python3 main.py
 
-#Тут я запустил вроде как приложение, но его же надо объявлять его в переменную для простановки порта..
-
 apps=("main.py")
 
 for i in "${!apps[@]}"; do
